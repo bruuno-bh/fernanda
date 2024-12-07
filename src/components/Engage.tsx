@@ -57,13 +57,28 @@ export default function Engage() {
         <div className="mt-16 text-center">
           <h3 className="text-white font-bold mb-6">NOSSAS REDES</h3>
           <div className="flex justify-center gap-6">
-            <a href="#" className="text-white hover:text-white/80 transition-colors">
+            <a 
+              href="https://www.instagram.com/oficialfernandatorres/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-white hover:text-white/80 transition-colors"
+            >
               <Instagram className="w-8 h-8" />
             </a>
-            <a href="#" className="text-white hover:text-white/80 transition-colors">
+            <a 
+              href="https://twitter.com/atijucana" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-white hover:text-white/80 transition-colors"
+            >
               <Twitter className="w-8 h-8" />
             </a>
-            <a href="#" className="text-white hover:text-white/80 transition-colors">
+            <a 
+              href="https://www.facebook.com/FernandaTorresAtriz/?locale=pt_BR" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-white hover:text-white/80 transition-colors"
+            >
               <Facebook className="w-8 h-8" />
             </a>
           </div>

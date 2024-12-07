@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play } from 'lucide-react';
+import { Play, Instagram } from 'lucide-react';
 
 export default function Header() {
   return (
@@ -12,6 +12,31 @@ export default function Header() {
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50" />
+      </div>
+
+      {/* Barra superior com CTA e ícones do Instagram */}
+      <div className="absolute top-0 w-full bg-black bg-opacity-70">
+        <div className="container mx-auto px-6 py-2 max-w-6xl flex items-center justify-center gap-12">
+          <p className="text-white text-sm font-medium">Siga no Instagram</p>
+          <a
+            href="https://www.instagram.com/oficialfernandatorres/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-white hover:text-[#FFD700] transition-colors"
+          >
+            <Instagram className="w-6 h-6" />
+            <span className="text-sm ml-2">Fernanda Torres</span>
+          </a>
+          <a
+            href="https://www.instagram.com/oriremarketing/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-white hover:text-[#FFD700] transition-colors"
+          >
+            <Instagram className="w-6 h-6" />
+            <span className="text-sm ml-2">Orire Marketing</span>
+          </a>
+        </div>
       </div>
 
       {/* Botão de Play centralizado */}

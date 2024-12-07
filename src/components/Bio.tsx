@@ -5,10 +5,11 @@ export default function Bio() {
     <section id="bio" className="bg-white overflow-hidden">
       <div className="container mx-auto px-4 py-20 max-w-4xl">
         <div className="flex flex-col md:flex-row items-start gap-12">
-          {/* Imagem de perfil em círculo */}
-          <div className="relative w-64 h-64 overflow-hidden rounded-full flex-shrink-0">
+          {/* Elemento personalizado com bordas superiores abauladas */}
+          <div className="relative w-64 h-80 overflow-hidden flex-shrink-0 bg-gray-200 rounded-t-[50%]">
+            {/* Imagem centralizada dentro do elemento */}
             <img
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80"
+              src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/11/fernanda-torres.png?w=550&h=302&crop=1&quality=85"
               alt="Fernanda Torres"
               className="w-full h-full object-cover"
             />

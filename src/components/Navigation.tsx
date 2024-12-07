@@ -14,19 +14,21 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 flex justify-center px-4 py-4 bg-gray-100">
-      <div className="flex gap-4 w-full max-w-6xl">
-        {navItems.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => scrollToSection(item.id)}
-            className={`${item.color} ${
-              item.id === 'onde-assistir' ? 'text-black' : 'text-white'
-            } py-4 px-6 font-bold hover:opacity-90 transition-opacity rounded-xl flex-1`}
-          >
-            {item.label}
-          </button>
-        ))}
+    <nav className="sticky top-0 z-50 bg-gray-100">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-wrap gap-4 justify-center py-4">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`${item.color} ${
+                item.id === 'onde-assistir' ? 'text-black' : 'text-white'
+              } py-3 px-4 font-bold hover:opacity-90 transition-opacity rounded-lg text-sm md:text-base flex-1 md:flex-none md:px-6`}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
       </div>
     </nav>
   );
