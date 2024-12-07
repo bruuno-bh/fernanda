@@ -23,7 +23,7 @@ export default function Navigation() {
               onClick={() => scrollToSection(item.id)}
               className={`${item.color} ${
                 item.id === 'onde-assistir' ? 'text-black' : 'text-white'
-              } py-3 px-4 font-bold hover:opacity-90 transition-opacity rounded-lg text-sm md:text-base flex-1 md:flex-none md:px-6`}
+              } py-3 px-4 md:py-5 md:px-8 font-bold hover:opacity-90 transition-opacity rounded-lg text-sm md:text-lg flex-1 md:flex-initial w-full md:w-auto`}
             >
               {item.label}
             </button>

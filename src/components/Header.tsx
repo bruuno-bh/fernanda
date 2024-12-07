@@ -2,6 +2,10 @@ import React from 'react';
 import { Play, Instagram } from 'lucide-react';
 
 export default function Header() {
+  const handlePlayClick = () => {
+    window.open('https://www.youtube.com/watch?v=_NzqP0jmk3o', '_blank');
+  };
+
   return (
     <header className="relative h-[85vh]">
       <div
@@ -41,7 +45,10 @@ export default function Header() {
 
       {/* Botão de Play centralizado */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <button className="group bg-white bg-opacity-20 rounded-full p-4 hover:bg-opacity-30 transition-all">
+        <button
+          onClick={handlePlayClick}
+          className="group bg-white bg-opacity-20 rounded-full p-4 hover:bg-opacity-30 transition-all"
+        >
           <Play className="w-10 h-10 text-white group-hover:scale-110 transition-transform" />
         </button>
       </div>
