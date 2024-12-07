@@ -6,28 +6,28 @@ const timelineEvents = [
     title: 'Primeiro Oscar',
     description: 'Primeira indicação ao Oscar de Melhor Atriz',
     image:
-      'https://images.unsplash.com/photo-1542206395-9feb3edaa68c?auto=format&fit=crop&q=80',
+      'https://s2-gshow.glbimg.com/gGDplAOiJ7haMbHOyKhzNwsCOS4=/216x0:1386x900/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2020/6/y/B8cUhBTWujfJQxLgB4Dg/fernanda-torres-altas-horas.png',
   },
   {
     year: 2008,
     title: 'Reconhecimento Internacional',
     description: 'Prêmio de Melhor Atriz em Cannes',
     image:
-      'https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?auto=format&fit=crop&q=80',
+      'https://revistatrip.uol.com.br/dados/_imgBank/1414684446trip237-p015v1-1.jpg',
   },
   {
     year: 2012,
     title: 'Conquista Nacional',
     description: 'Grande Prêmio do Cinema Brasileiro',
     image:
-      'https://images.unsplash.com/photo-1562157872-8180ff60b4e0?auto=format&fit=crop&q=80',
+      'https://img.band.uol.com.br/image/2024/09/03/fernanda-torres-19228_800x450.webp',
   },
   {
     year: 2024,
     title: 'Campanha Oscar',
     description: '#OscarForNanda',
     image:
-      'https://images.unsplash.com/photo-1517638851339-d46d9c5e31b8?auto=format&fit=crop&q=80',
+      'https://s2-g1.glbimg.com/RlLlmWbnGuGbZAz6qNRUHnMy7r4=/0x0:1024x682/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/A/B/HN9PAzQpyfN19RkFoFaA/000-36fb4bf.jpg',
   },
 ];
 
@@ -57,10 +57,28 @@ export default function Timeline() {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <span className="text-black font-bold text-xl md:text-2xl mb-2">
+                {/* Ano */}
+                <span
+                  className={`text-xl md:text-2xl mb-2 font-bold ${
+                    hoveredIndex === index ? 'text-[#FFD700]' : 'text-black'
+                  }`}
+                >
                   {event.year}
                 </span>
-                <div className="w-1 h-8 bg-black"></div>
+
+                {/* Bolinha no início da linha vertical */}
+                <div className="relative flex flex-col items-center">
+                  <div
+                    className={`w-4 h-4 rounded-full ${
+                      hoveredIndex === index ? 'bg-[#FFD700]' : 'bg-black'
+                    }`}
+                  ></div>
+                  <div
+                    className={`w-1 h-8 ${
+                      hoveredIndex === index ? 'bg-[#FFD700]' : 'bg-black'
+                    }`}
+                  ></div>
+                </div>
               </div>
             ))}
           </div>
@@ -68,14 +86,14 @@ export default function Timeline() {
 
         {/* Conteúdo do Evento Selecionado */}
         {selectedEvent && (
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+          <div className="flex flex-row flex-wrap items-center justify-center gap-4">
             {/* Imagem à esquerda */}
-            <div className="flex-shrink-0 order-1 md:order-none">
+            <div className="flex-shrink-0">
               <div
                 className="rounded-full overflow-hidden border-4 border-black"
                 style={{
-                  width: 'clamp(100px, 20vw, 200px)',
-                  height: 'clamp(100px, 20vw, 200px)',
+                  width: 'clamp(100px, 30vw, 200px)',
+                  height: 'clamp(100px, 30vw, 200px)',
                 }}
               >
                 <img
@@ -86,12 +104,12 @@ export default function Timeline() {
               </div>
             </div>
 
-            {/* Texto à direita */}
-            <div className="order-2 md:order-none">
-              <h3 className="text-black font-bold text-2xl md:text-3xl mb-4">
+            {/* Texto à direita, centralizado verticalmente */}
+            <div className="flex-1 text-center max-w-sm">
+              <h3 className="text-black font-bold text-2xl mb-4">
                 {selectedEvent.title}
               </h3>
-              <p className="text-black text-lg leading-relaxed max-w-xl">
+              <p className="text-black text-lg leading-relaxed">
                 {selectedEvent.description}
               </p>
             </div>
