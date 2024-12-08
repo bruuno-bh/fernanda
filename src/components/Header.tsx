@@ -23,6 +23,15 @@ export default function Header() {
         <div className="container mx-auto px-6 py-2 max-w-6xl flex items-center justify-center gap-12">
           <p className="text-white text-sm font-medium">Siga no Instagram</p>
           <a
+            href="https://www.instagram.com/oscarfornanda/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-white hover:text-[#FFD700] transition-colors"
+          >
+            <Instagram className="w-6 h-6" />
+            <span className="text-sm ml-2">OscarForNanda</span>
+          </a>
+          <a
             href="https://www.instagram.com/oficialfernandatorres/"
             target="_blank"
             rel="noopener noreferrer"
@@ -30,15 +39,6 @@ export default function Header() {
           >
             <Instagram className="w-6 h-6" />
             <span className="text-sm ml-2">Fernanda Torres</span>
-          </a>
-          <a
-            href="https://www.instagram.com/oriremarketing/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center text-white hover:text-[#FFD700] transition-colors"
-          >
-            <Instagram className="w-6 h-6" />
-            <span className="text-sm ml-2">Orire Marketing</span>
           </a>
         </div>
       </div>

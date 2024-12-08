@@ -3,12 +3,15 @@ import { Instagram, Twitter, Facebook } from 'lucide-react';
 
 export default function Engage() {
   return (
-    <section id="engage" className="bg-blue-600 py-20">
+    <section
+      id="engage"
+      className="bg-blue-600 flex flex-col justify-between min-h-screen pt-20"
+    >
       <div className="container mx-auto px-4 max-w-4xl">
         <h2 className="text-4xl font-bold text-white text-center mb-12">
           ENGAGE
         </h2>
-        
+
         <form className="max-w-md mx-auto space-y-6">
           <div>
             <label htmlFor="name" className="block text-white mb-2">
@@ -21,7 +24,7 @@ export default function Engage() {
               placeholder="Seu nome"
             />
           </div>
-          
+
           <div>
             <label htmlFor="instagram" className="block text-white mb-2">
               Instagram
@@ -33,7 +36,7 @@ export default function Engage() {
               placeholder="@seuinstagram"
             />
           </div>
-          
+
           <div>
             <label htmlFor="phone" className="block text-white mb-2">
               Celular
@@ -45,7 +48,7 @@ export default function Engage() {
               placeholder="(00) 00000-0000"
             />
           </div>
-          
+
           <button
             type="submit"
             className="w-full bg-white text-blue-600 font-bold py-3 rounded-lg hover:bg-opacity-90 transition-colors"
@@ -53,36 +56,49 @@ export default function Engage() {
             Participar
           </button>
         </form>
-        
+
         <div className="mt-16 text-center">
           <h3 className="text-white font-bold mb-6">NOSSAS REDES</h3>
-          <div className="flex justify-center gap-6">
-            <a 
-              href="https://www.instagram.com/oficialfernandatorres/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+          <div className="flex justify-center gap-6 mb-10">
+            <a
+              href="https://www.instagram.com/oficialfernandatorres/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white hover:text-white/80 transition-colors"
             >
               <Instagram className="w-8 h-8" />
             </a>
-            <a 
-              href="https://twitter.com/atijucana" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://twitter.com/atijucana"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white hover:text-white/80 transition-colors"
             >
               <Twitter className="w-8 h-8" />
             </a>
-            <a 
-              href="https://www.facebook.com/FernandaTorresAtriz/?locale=pt_BR" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://www.facebook.com/FernandaTorresAtriz/?locale=pt_BR"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white hover:text-white/80 transition-colors"
             >
               <Facebook className="w-8 h-8" />
             </a>
           </div>
         </div>
+      </div>
+
+      {/* Linha e título no final */}
+      <div className="w-full border-t border-white/30 text-white text-sm text-center py-2">
+        Copyright 2024 Orire Marketing | Developed by{' '}
+        <a
+          href="http://toogood.tech/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-white/80"
+        >
+          Toogood
+        </a>
       </div>
     </section>
   );

@@ -41,7 +41,7 @@ export default function Timeline() {
     <section id="timeline" className="bg-[#32CD32] py-12">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Título da Seção */}
-        <h2 className="text-black font-extrabold text-5xl md:text-7xl mb-12">
+        <h2 className="text-black font-extrabold text-5xl md:text-7xl mb-12 text-center md:text-left">
           TIMELINE
         </h2>
 
