@@ -8,15 +8,17 @@ export default function Header() {
 
   return (
     <header className="relative h-[85vh]">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            'url("https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80")',
-        }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-50" />
-      </div>
+      {/* Vídeo de fundo */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src="https://toogood.tech/wp-content/uploads/2024/12/Ainda-Estou-Aqui-.mp4" // Link do vídeo
+        autoPlay
+        loop
+        muted
+      />
+
+      {/* Overlay escuro para contraste */}
+      <div className="absolute inset-0 bg-black bg-opacity-50" />
 
       {/* Barra superior com CTA e ícones do Instagram */}
       <div className="absolute top-0 w-full bg-black bg-opacity-70">
